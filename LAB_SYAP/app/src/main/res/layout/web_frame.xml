@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/webFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_white">
+
+    <LinearLayout
+        android:id="@+id/settingsView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/reloadButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_reload" />
+
+        <Button
+            android:id="@+id/goForward"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_forward" />
+
+        <Button
+            android:id="@+id/setHomePage"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_sethome" />
+
+        <Button
+            android:id="@+id/setBookmark"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_bookmark" />
+
+        <Button
+            android:id="@+id/showBookmarks"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_bookmarklist" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+    </WebView>
+
+    <EditText
+        android:id="@+id/editSearchRequest"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="@drawable/stroke"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/search_request"
+        app:layout_constraintEnd_toStartOf="@+id/searchButton"
+        app:layout_constraintStart_toEndOf="@+id/homePage"
+        app:layout_constraintTop_toTopOf="@+id/homePage" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_search"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintTop_toTopOf="@+id/homePage" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSearchRequest" />
+
+    <Button
+        android:id="@+id/homePage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_home"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_settings"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchButton" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/webView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

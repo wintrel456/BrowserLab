@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LAB_SYAP</string>
+    <string name="go_forward_button">F</string>
+    <string name="reload_button">R</string>
+    <string name="search_request"></string>
+    <string name="search_button">S</string>
+    <string name="home_button">H</string>
+    <string name="settings_button">ST</string>
+    <string name="set_home_page">SHP</string>
+    <string name="set_bookmark">SB</string>
+    <string name="show_bookmarks">BL</string>
+</resources>
